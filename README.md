@@ -1,11 +1,10 @@
 ## 🐷 KalorieApp
 
-🐽 KalorieApp - Calorie and Water Tracker for Glorious Gluttons
-KalorieApp is a .NET MAUI-based mobile application that helps you keep track of your daily calorie intake and water consumption, while calculating essential stats like BMI and BMR.
-Perfect for health-conscious people, gym rats... or just a sexy pig trying to get their life together. 🐷💧🔥
+🐽 KalorieApp - Calorie and Water Tracker for Glorious Gluttons<br>
+KalorieApp is a .NET MAUI-based mobile application that helps you keep track of your daily calorie intake and water consumption, while calculating essential stats like BMI and BMR.<br>
+Perfect for health-conscious people, gym rats... or just a sexy pig trying to get their life together. 🐷💧🔥<br>
 
-#💡 Features
-
+#💡 Features<br>
 🧠 User Profiles - Manage multiple users with personal data (height, weight, age, gender)<br>
 🧮 Automatic Calculations - BMI (Body Mass Index) and BMR (Basal Metabolic Rate)<br>
 🍖 Calorie Tracking - Add and review what you’ve eaten, day by day<br>
