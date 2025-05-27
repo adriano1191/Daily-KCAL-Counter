@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalorieApp.MainPage">
+
+
+    <ScrollView x:Name="MainScroll" Padding="0,0,0,200">
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label x:Name="HelloWorld"
+                Text="Licz kalorie świnio!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Image
+                Source="knur.png"
+                HeightRequest="255"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+
+            <VerticalStackLayout Spacing="2">
+
+            <Label x:Name="LabelLimit"
+                Text="Label"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"                 
+                LineBreakMode="WordWrap"
+                MaxLines="1"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Fill" 
+                Margin="5" LineHeight="1" />
+                
+            <Label x:Name="LabelKcl"
+                Text="Zjadłeś dziś: 0 kcal"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" 
+                LineBreakMode="WordWrap"
+                MaxLines="1"
+                FontSize="20"
+                HorizontalOptions="Fill" 
+                Margin="0" LineHeight="1" />
+            <Label x:Name="LabelWater"
+                Text="Zjadłeś dziś: 0 kcal"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" 
+                LineBreakMode="WordWrap"
+                MaxLines="1"
+                FontSize="20"
+                HorizontalOptions="Fill" 
+                Margin="0" LineHeight="1" />
+            </VerticalStackLayout>
+
+            <Grid ColumnSpacing="6" RowSpacing="6">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+                <ImageButton Source="sandwich.png" Grid.Column="0" Grid.Row="0" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="50" Padding="0" CornerRadius="10"/>
+                <ImageButton Source="dinner.png" Grid.Column="1" Grid.Row="0" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="50" Padding="5" CornerRadius="10"/>
+                <ImageButton Source="nuts.png" Grid.Column="2" Grid.Row="0" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="50" Padding="-1" CornerRadius="10"/>
+
+
+                <Entry x:Name="AddKcl"
+                    Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                    Keyboard="Numeric"
+                    Placeholder="Ile zeżarłeś?" 
+                    TextChanged="OnEntryTextChanged"
+                    Completed="OnEntryCompleted" />
+                
+                <Button Grid.Column="2" Grid.Row="1"
+                Text="+100"
+                x:Name="PlusHundred"
+                Clicked="HundredClicked"/>
+                
+                <Entry x:Name="AddWater"
+                   Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="1"
+                   Keyboard="Numeric"
+                   Placeholder="Ile wypiłeś?" 
+                   TextChanged="OnEntryTextChanged"
+                   Completed="OnEntryCompleted" />
+                <ImageButton x:Name="GlassWater" Clicked="AddGlassWater" Source="glass_of_water.png" Grid.Column="1" Grid.Row="2" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="50" Padding="2" CornerRadius="10"/>
+                <ImageButton Source="plastic_bottle.png" Grid.Column="2" Grid.Row="2" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="50" Padding="1" CornerRadius="10"/>
+
+                <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"
+                x:Name="AddBtn"
+                Text="Dodaj" 
+                SemanticProperties.Hint="Dodaje posiłek do bazy danych"
+                Clicked="OnAddClicked"
+                HorizontalOptions="Fill" />
+            </Grid>
+            <Line Stroke="White" X2="1000"></Line>
+
+            <!--
+            <Label
+                Text="A co z wodą knurze?"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Image
+                Source="knur_woda.png"
+                HeightRequest="255"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Ile wypiłeś?"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+            <Grid ColumnSpacing="3" RowSpacing="1" Margin="30" Padding="10" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="LabelWater" Grid.Column="0" Grid.ColumnSpan="2" MaxLines="1" HeightRequest="30" FontAutoScalingEnabled="True" FontSize="20" HorizontalTextAlignment="Center"
+                Text="Ile litrów?"/>
+                <ImageButton Source="glass_of_water.png" Grid.Column="2" Grid.Row="0" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="30" Padding="2" CornerRadius="10"/>
+                <ImageButton Source="plastic_bottle.png" Grid.Column="3" Grid.Row="0" Aspect="AspectFit" BackgroundColor="#AC99EA" HeightRequest="30" Padding="1" CornerRadius="10"/>
+
+            </Grid>
+            
+            <Line Stroke="White" X2="1000" ></Line>
+-->
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

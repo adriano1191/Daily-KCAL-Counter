@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:KalorieApp"
+             x:Class="KalorieApp.CalorieHistoryPage"
+             Title="Historia kalorii">
+
+    <Grid RowDefinitions="Auto, Auto, *" Padding="20">
+
+        <DatePicker x:Name="datePicker"
+                    Date="{x:Static sys:DateTime.Today}"
+                    DateSelected="OnDateSelected"
+                    Grid.Row="0" />
+
+        <Label x:Name="totalCaloriesLabel"
+               Text="Suma kalorii: 0"
+               FontAttributes="Bold"
+               Margin="0,10"
+               Grid.Row="1"/>
+
+        <ListView x:Name="calorieListView"
+                  HasUnevenRows="True"
+                  Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:CalorieEntry">
+                    <ViewCell>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label Text="{Binding MealType}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Calories, StringFormat='Kalorie: {0}'}"/>
+                                <Label Text="{Binding Water, StringFormat='Woda: {0} L'}"/>
+                                <Label Text="{Binding Note}" FontAttributes="Italic"/>
+                                <Label Text="{Binding EntryTime, StringFormat='Godzina: {0:HH:mm}'}"/>
+                            </VerticalStackLayout>
+
+                            <ImageButton
+                                Source="trash.png"
+                                WidthRequest="24"
+                                HeightRequest="24"
+                                BackgroundColor="Transparent"
+                                CommandParameter="{Binding .}"
+                                Clicked="OnDeleteEntryClicked"
+                                Grid.Column="1"
+                                HorizontalOptions="End"
+                                VerticalOptions="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</ContentPage>

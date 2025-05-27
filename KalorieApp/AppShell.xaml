@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="KalorieApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:KalorieApp"
+    Shell.FlyoutBehavior="Flyout"
+    Title="KalorieApp">
+
+    <!-- Standardowe strony -->
+    <ShellContent
+        Title="Start"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Świnia"
+        ContentTemplate="{DataTemplate local:UserDataPage}"
+        Route="UserDataPage" />
+
+    <!-- Możesz usunąć ShellContent Kalorie jeśli nie działa -->
+    <!-- <ShellContent Title="Kalorie" ContentTemplate="{DataTemplate local:CalorieHistoryPage}" Route="CalorieHistoryPage" /> -->
+
+    <!-- MENUITEM poza innymi elementami -->
+    <MenuItem
+        Text="Historia kalorii"
+        Clicked="OnCalorieHistoryClicked"
+        IconImageSource="history_icon.png" />
+</Shell>
+

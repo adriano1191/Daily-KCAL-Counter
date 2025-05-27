@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:KalorieApp"
+             x:Class="KalorieApp.UserDataPage"
+             Title="UserDataPage">
+
+    <VerticalStackLayout>
+        <Label Text="Dane" />
+
+        <!-- Te Entry są powiązane przez x:Name, więc binding nie musi być compile-time -->
+        <Entry x:Name="nameEntryField" Placeholder="Nazwa" />
+        <Entry x:Name="heightEntryField" Placeholder="Wzrost" Keyboard="Numeric" />
+        <Entry x:Name="weightEntryField" Placeholder="Waga" Keyboard="Numeric" />
+        <Entry x:Name="ageEntryField" Placeholder="Wiek" Keyboard="Numeric" />
+
+        <Picker x:Name="genderPicker" Title="Płeć">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Mężczyzna</x:String>
+                    <x:String>Kobieta</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button x:Name="saveButton" Text="Zapisz" Clicked="SaveButton_Clicked" />
+
+        <ListView x:Name="listView"
+                  FlexLayout.Grow="1"
+                  HasUnevenRows="True"
+                  ItemTapped="ListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <!-- ⬇️ x:DataType wskazuje, że bindingi będą do typu User -->
+                <DataTemplate x:DataType="local:User">
+                    <ViewCell>
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="{Binding UserName}" />
+                            <Label Text="{Binding FormattedHeight}" />
+                            <Label Text="{Binding FormattedWeight}" />
+                            <Label Text="{Binding FormattedAge}" />
+                            <Label Text="{Binding FormattedGender}" />
+                            <Label Text="{Binding FormattedBMI}" />
+                            <Label Text="{Binding FormattedBMR}" />
+                            <Label Text="{Binding FormattedWaterNeed}" />
+                            <Label Text="{Binding FormattedWaterToDrink}" />
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
