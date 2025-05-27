@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Koryto;
 using Microsoft.Maui.Controls;
 
-namespace KalorieApp
+namespace Koryto
 {
     public partial class CalorieHistoryPage : ContentPage
     {

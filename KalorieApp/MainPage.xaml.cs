@@ -1,6 +1,6 @@
 ﻿using Koryto;
 
-namespace KalorieApp
+namespace Koryto
 {
     public partial class MainPage : ContentPage
     {

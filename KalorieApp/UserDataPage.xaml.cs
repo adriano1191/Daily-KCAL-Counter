@@ -2,7 +2,7 @@ using Koryto;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace KalorieApp;
+namespace Koryto;
 
 public partial class UserDataPage : ContentPage
 {

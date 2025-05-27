@@ -1,4 +1,5 @@
-﻿namespace KalorieApp
+﻿
+namespace Koryto
 {
     public partial class App : Application
     {
@@ -14,6 +15,7 @@
 
 
         }
+
 
         protected override Window CreateWindow(IActivationState? activationState)
         {

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage     
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:Koryto"    
+    x:Class="Koryto.ReadyMealsPage"
+    Title="Gotowe posiłki">
+    <Grid RowDefinitions="Auto, *" Padding="20">
+
+
+        <!-- 1) Dodawanie posiłku -->
+        <Label Text="Dane" />
+
+        <!-- Te Entry są powiązane przez x:Name, więc binding nie musi być compile-time -->
+        <Entry x:Name="nameEntryField" Placeholder="Nazwa" />
+        <Entry x:Name="caloriesEntryField" Placeholder="Kalorie" Keyboard="Numeric" />
+        <Entry x:Name="descriptionEntryField" Placeholder="Opis" />
+        <Button x:Name="saveButton" Text="Zapisz" Clicked="SaveButton_Clicked" />
+
+        <!-- 1) Pasek wyszukiwania do filtrowania listy -->
+        <!--
+        <SearchBar
+        x:Name="searchBar"
+        Placeholder="Szukaj posiłku…"
+        TextChanged="OnSearchBarTextChanged"
+        Grid.Row="0" />
+        -->
+        
+
+    </Grid>
+</ContentPage>

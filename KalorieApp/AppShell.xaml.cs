@@ -1,6 +1,6 @@
 ﻿using Koryto;
 
-namespace KalorieApp
+namespace Koryto
 {
     public partial class AppShell : Shell
     {
@@ -17,5 +17,7 @@ namespace KalorieApp
             Shell.Current.FlyoutIsPresented = false; //to zamyka wysunięte menu
             await Shell.Current.Navigation.PushAsync(new CalorieHistoryPage(localDb, userId));
         }
+
+
     }
 }

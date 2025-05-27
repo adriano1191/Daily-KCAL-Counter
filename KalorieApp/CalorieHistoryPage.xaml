@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:local="clr-namespace:Koryto"
-             x:Class="KalorieApp.CalorieHistoryPage"
+             x:Class="Koryto.CalorieHistoryPage"
              Title="Historia kalorii">
 
     <Grid RowDefinitions="Auto, Auto, *" Padding="20">

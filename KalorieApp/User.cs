@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace KalorieApp
+namespace Koryto
 {
     [Table("user")]
     public class User
