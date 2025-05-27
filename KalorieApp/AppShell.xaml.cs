@@ -1,4 +1,6 @@
-﻿namespace KalorieApp
+﻿using Koryto;
+
+namespace KalorieApp
 {
     public partial class AppShell : Shell
     {

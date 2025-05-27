@@ -1,7 +1,7 @@
 ﻿using System;
 using SQLite;
 
-namespace KalorieApp
+namespace Koryto
 {
     [Table("calorie_entry")]
     public class CalorieEntry

@@ -102,6 +102,7 @@
                 SemanticProperties.Hint="Dodaje posiłek do bazy danych"
                 Clicked="OnAddClicked"
                 HorizontalOptions="Fill" />
+                
             </Grid>
             <Line Stroke="White" X2="1000"></Line>
 

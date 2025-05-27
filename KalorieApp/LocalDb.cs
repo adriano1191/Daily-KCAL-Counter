@@ -1,7 +1,8 @@
-﻿using SQLite;
+﻿using KalorieApp;
+using SQLite;
 using System;
 
-namespace KalorieApp
+namespace Koryto
 {
     public class LocalDb
     {

@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using KalorieApp;
+using Microsoft.Extensions.Logging;
 
-namespace KalorieApp
+namespace Koryto
 {
     public static class MauiProgram
     {
