@@ -6,28 +6,16 @@ Perfect for health-conscious people, gym rats... or just a sexy pig trying to ge
 
 #💡 Features
 
-🧠 User Profiles - Manage multiple users with personal data (height, weight, age, gender)
+🧠 User Profiles - Manage multiple users with personal data (height, weight, age, gender)<br>
+🧮 Automatic Calculations - BMI (Body Mass Index) and BMR (Basal Metabolic Rate)<br>
+🍖 Calorie Tracking - Add and review what you’ve eaten, day by day<br>
+💧 Water Intake Logging - Track hydration throughout the day<br>
+📊 History View - See what you consumed on any date<br>
+🐽 Funny UI - Motivational messages with a playful attitude<br>
+🔔 (Planned) Notifications to drink more water or stop being a fat pig 🐷<br><br>
 
-🧮 Automatic Calculations - BMI (Body Mass Index) and BMR (Basal Metabolic Rate)
-
-🍖 Calorie Tracking - Add and review what you’ve eaten, day by day
-
-💧 Water Intake Logging - Track hydration throughout the day
-
-📊 History View - See what you consumed on any date
-
-🐽 Funny UI - Motivational messages with a playful attitude
-
-🔔 (Planned) Notifications to drink more water or stop being a fat pig 🐷
-
-
-#📱 Built With
-
-✅ .NET MAUI - Cross-platform UI framework
-
-✅ SQLite - Lightweight embedded database
-
-✅ C# - For beautiful, powerful logic
-
-✅ Visual Studio 2022 Preview - IDE of dreams
-
+#📱 Built With<br>
+✅ .NET MAUI - Cross-platform UI framework<br>
+✅ SQLite - Lightweight embedded database<br>
+✅ C# - For beautiful, powerful logic<br>
+✅ Visual Studio 2022 Preview - IDE of dreams<br>
